@@ -14,6 +14,20 @@ npm install
 npm test
 ```
 
+
+### Test Code
+
+```js
+var assert = require('power-assert').customize(outputASTCustomization);
+describe("test", function () {
+    it("is test", function () {
+        var xAST = parse("var n = 1\nvar x;");
+        var yAST = parse("var n = 2\nvar y;");
+        assert.deepEqual(xAST, yAST);
+    });
+});
+```
+
 Result:
 
 ```
